@@ -1,0 +1,17 @@
+#!/bin/bash
+
+HOST=${1:-$(hostname)}
+echo "# put this in ~/.ssh/config"
+echo "# DOKKU START"
+echo "# git remote add deploy dokku:<my-vhost>"
+cat <<EOF
+Host dokku
+  Hostname $HOST
+  User dokku
+  RequestTTY yes
+EOF
+echo "# DOKKU END"
+echo
+
+#####
+# EOF

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+export DOKKU_ROOT=${DOKKU_ROOT:="/home/dokku"}
+
